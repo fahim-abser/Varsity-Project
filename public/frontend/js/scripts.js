@@ -45,7 +45,7 @@ $(document).ready(function() {
             click: function() {
                 if (this.status() == 'available') {
                     //let's create a new <li> which we'll add to the cart items
-                    $('<li>' + this.data().category + '  # ' + this.settings.label + ': <b>৳' + this.data().price + '</b> <a href="#" class="cancel-cart-item">[cancel]</a></li>')
+                    $('<li>' + this.data().category + '  # ' + this.settings.label + ' <a href="#" class="cancel-cart-item">[cancel]</a></li>')
                         .attr('id', 'cart-item-' + this.settings.id)
                         .data('seatId', this.settings.id)
                         .appendTo($cart);
@@ -128,7 +128,7 @@ $(function() {
             })
         }
         localStorage.setItem('booked', JSON.stringify(selected))
-        alert("Table has been Reserved successfully.")
+        alert("Table reserved successful & reservation will expire after 2 hours from now.")
         location.reload()
     })
     $('#reset-btn').click(function() {
